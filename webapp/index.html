@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+		<meta charset="utf-8">
 		<title>Walkthrough</title>
+		<script
+			id="sap-ui-bootstrap"
+			src="http://localhost:8098/sapui5/1.48.11/sap-ui-core.js"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-libs="sap.m"
+			data-sap-uiCompatVersion="edge"
+			data-sap-ui-preload="async"
+		></script>
+		<script>
+			sap.ui.getCore().attachInit(function(){
+				alert("SAPUI5 is ready");
+			})
+		</script>
 	</head>
 	<body>
 		<p>Hello world</p>
-		<marquee>Hello</marquee>
-		<button id="myButton">Press me!</button>
-		<script>
-		    var button = document.getElementById("myButton");
-			button.addEventListener("click", onButtonPress);
-			function onButtonPress() {
-				alert("hello");
-			}
-	</script>
 	</body>
 </html>
