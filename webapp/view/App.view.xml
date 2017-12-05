@@ -2,4 +2,5 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Text text="Hello XMLView"></Text>
+	<Text text="Second Text"></Text>
 </mvc:View>
