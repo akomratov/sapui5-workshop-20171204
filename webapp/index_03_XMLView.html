@@ -16,14 +16,9 @@
 		<script>
 			sap.ui.getCore().attachInit(function(){
 				
-				new sap.ui.core.ComponentContainer({
-					name: "workshop.wt"
+				sap.ui.xmlview({
+					viewName: "workshop.wt.view.App"
 				}).placeAt("content");
-				
-				// Step 06 - XMLView instantiated in Component.js
-				// sap.ui.xmlview({
-				// 	viewName: "workshop.wt.view.App"
-				// }).placeAt("content");
 
                 // Step 02 - simple Text				
 				// new sap.m.Text({
