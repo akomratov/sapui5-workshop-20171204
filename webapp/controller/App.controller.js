@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast",
-	"sap/ui/model/json/JSONModel"
-	], function(Controller, MessageToast, JSONModel) {
+	"sap/ui/model/json/JSONModel",
+	"sap/ui/model/resource/ResourceModel"
+	], function(Controller, MessageToast, JSONModel, ResourceModel) {
 		"use strict";
 		return Controller.extend("workshop.wt.controller.App", {
 			onShowHello: function() {
@@ -21,6 +22,13 @@ sap.ui.define([
 				var oModel = new JSONModel(oData);
 				
 				this.getView().setModel(oModel);
+				
+				//////////////////////////////////////////////
+				// Resource Model
+				var i18nModel = new ResourceModel({
+					bundleName: "workshop.wt.i18n.i18n"
+				});
+				this.getView().setModel(i18nModel, "i18n");
 			}
 		});
 });
