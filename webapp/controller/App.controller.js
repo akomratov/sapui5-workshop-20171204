@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageToast"
-	], function(Controller, MessageToast) {
+	"sap/m/MessageToast",
+	"sap/ui/model/json/JSONModel"
+	], function(Controller, MessageToast, JSONModel) {
 		"use strict";
 		return Controller.extend("workshop.wt.controller.App", {
 			onShowHello: function() {
@@ -10,6 +11,16 @@ sap.ui.define([
 					duration: 500, 
 					animationDuration: 2000,
 					animationTimingFunction: "ease-in-out" });
+			},
+			onInit: function() {
+				var oData = {
+					recipient: {
+						name: "Agent Smith"
+					}
+				};
+				var oModel = new JSONModel(oData);
+				
+				this.getView().setModel(oModel);
 			}
 		});
 });

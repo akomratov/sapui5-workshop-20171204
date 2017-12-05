@@ -5,4 +5,10 @@
 	<Text text="Hello XMLView"></Text>
 	<Text text="Second Text"></Text>
 	<Button text="Say Hello" press="onShowHello"></Button>
+	<Input
+		value="{/recipient/name}"
+		description="Hello {/recipient/name}"
+		valueLiveUpdate="true"
+		width="40%"
+	/>
 </mvc:View>
