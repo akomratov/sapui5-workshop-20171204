@@ -17,8 +17,8 @@
 								text="Hello XMLView"
 								class="sapUiSmallMargin myCustomText"
 								></Text>
-							<Text 
-								text="Second Text"
+							<FormattedText 
+								htmlText="Second Text"
 								class="sapUiSmallMargin sapThemeHighlight-asColor"
 								/>
 							<Button 
