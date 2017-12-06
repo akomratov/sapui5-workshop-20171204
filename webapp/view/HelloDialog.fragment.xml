@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		id="erolsDialog"
+		title="{i18n>erolsDialogTitle}"
+	>
+		<beginButton>
+			<Button 
+				text="Begin button"
+				press="onCloseErolsDialog"/>
+			
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

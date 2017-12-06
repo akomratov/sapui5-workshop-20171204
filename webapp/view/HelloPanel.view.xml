@@ -28,6 +28,10 @@
 				description="Hello {/recipient/name}"
 				valueLiveUpdate="true"
 				width="40%"/>
+			<Button 
+				text="{i18n>erolsButton}" 
+				press="onOpenErolsDialog"
+				class="myCustomButton"/>
 		</content>
 	</Panel>
 

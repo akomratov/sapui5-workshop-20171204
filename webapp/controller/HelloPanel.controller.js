@@ -56,6 +56,19 @@ sap.ui.define([
 				}
 	
 				this.oDialog.open();
+			},
+			onOpenErolsDialog: function() {
+				var oView = this.getView();
+				var oDialog = oView.byId("erolsDialog");
+				if(!oDialog) {
+					console.warn("Erol's dialog wasn't found!!!");
+					oDialog = sap.ui.xmlfragment(oView.getId(), "workshop.wt.view.HelloDialog", this);
+					oView.addDependent(oDialog);
+				}
+				oDialog.open();
+			},
+			onCloseErolsDialog: function() {
+				this.getView().byId("erolsDialog").close();
 			}
 		});
 });
