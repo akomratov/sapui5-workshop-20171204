@@ -33,12 +33,21 @@ sap.ui.define([
 							htmlText: "{i18n>dialogText}"
 						}),
 						beginButton: new Button({
-							text: 'Close',
+							text: '{i18n>beginClose}',
 							press: function () {
 								this.oDialog.close();
 							}.bind(this)
 						})
 					});
+					this.oDialog.addContent(new FormattedText({
+							htmlText: "{i18n>dialogText}"
+						}));
+					this.oDialog.setEndButton(new Button({
+							text: '{i18n>endClose}',
+							press: function () {
+								this.oDialog.close();
+							}.bind(this)
+						}));
 					this.oDialog.addStyleClass("sapUiSmallMargin");
 					this.oDialog.addStyleClass("sapThemeHighlight-asColor");
 	
