@@ -14,11 +14,22 @@
 			data-sap-ui-resourceroots='{"workshop.wt": "./"}'
 		></script>
 		<script>
-			sap.ui.getCore().attachInit(function(){
+			sap.ui.getCore().attachInit(function() {
 				
-				new sap.ui.core.ComponentContainer({
+				var oContainer = new sap.ui.core.ComponentContainer({
 					name: "workshop.wt"
-				}).placeAt("content");
+				});
+				
+				var oShell = new sap.m.Shell({
+					app: oContainer
+				});
+				
+				oShell.placeAt("content");
+				
+				// Now Component was placed into Shell 				
+				// new sap.ui.core.ComponentContainer({
+				// 	name: "workshop.wt"
+				// }).placeAt("content");
 				
 				// Step 06 - XMLView instantiated in Component.js
 				// sap.ui.xmlview({
@@ -29,7 +40,7 @@
 				// new sap.m.Text({
 				// 	text: "Hello SAPUI5"
 				// }).placeAt("content");
-			})
+			});
 		</script>
 	</head>
 	<body class="sapUiBody" id="content">
