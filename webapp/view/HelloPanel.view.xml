@@ -9,6 +9,10 @@
 		class="sapUiResponsiveMargin"
 		width="auto">
 		<content>
+			<Button 
+				text="{i18n>showDialog}" 
+				press="onShowDialog"
+				class="myCustomButton"/>
 			<Text 
 				text="Hello XMLView"
 				class="sapUiSmallMargin myCustomText"/>
