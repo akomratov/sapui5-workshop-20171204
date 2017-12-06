@@ -1,3 +1,21 @@
+
+<mvc:View
+	controllerName="workshop.wt.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<App class="myAppDemoWT">
+		<pages>
+			<Page title="{i18n>homePageTitle}">
+				<content>
+					<mvc:XMLView viewName="workshop.wt.view.HelloPanel"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
+
+<!-- BEFORE HelloPanel.view.xml
 <mvc:View
 	controllerName="workshop.wt.controller.App"
 	xmlns="sap.m"
@@ -38,8 +56,9 @@
 			</Page>
 		</pages>
 	</App>
-
 </mvc:View>
+
+-->
 
 <!--  Simple View, which doesn't support Mobile
 
