@@ -8,8 +8,13 @@ sap.ui.define([
         return UIComponent.extend("workshop.wt.Component", {
         	
         	metadata: {
-        		rootView: "workshop.wt.view.App"
+        		manifest: "json"
         	},
+        	///////////////////////////////////////////
+        	// Changed to use manifest.json
+        	// metadata: {
+        	// 	rootView: "workshop.wt.view.App"
+        	// },
         	
         	init: function() {
         		// call parent init function
@@ -25,13 +30,14 @@ sap.ui.define([
 				// set JSON model globally
 				this.setModel(oModel);
 				
-				//////////////////////////////////////////////
-				// Resource Model
-				var i18nModel = new ResourceModel({
-					bundleName: "workshop.wt.i18n.i18n"
-				});
-				// set Resource Model globally
-				this.setModel(i18nModel, "i18n");
+				//////////////////////////////////////////////////////////
+				// Resource model now is instantiated in manifest.json
+				// // Resource Model
+				// var i18nModel = new ResourceModel({
+				// 	bundleName: "workshop.wt.i18n.i18n"
+				// });
+				// // set Resource Model globally
+				// this.setModel(i18nModel, "i18n");
 
         	}
         });
