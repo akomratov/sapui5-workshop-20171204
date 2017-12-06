@@ -31,7 +31,8 @@
 			<Button 
 				text="{i18n>erolsButton}" 
 				press="onOpenErolsDialog"
-				class="myCustomButton"/>
+				class="myCustomButton"
+				icon="sap-icon://person-placeholder"/>
 		</content>
 	</Panel>
 

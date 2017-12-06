@@ -5,6 +5,12 @@
 		id="erolsDialog"
 		title="{i18n>erolsDialogTitle}"
 	>
+      <content>
+         <core:Icon
+            src="sap-icon://hello-world"
+            size="8rem"
+            class="sapUiMediumMargin"/>
+      </content>
 		<beginButton>
 			<Button 
 				text="Begin button"
