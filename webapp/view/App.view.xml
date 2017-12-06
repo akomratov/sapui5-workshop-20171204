@@ -3,15 +3,29 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true">
-	<App>
+	<App class="myAppDemoWT">
 		<pages>
 			<Page title="{i18n>homePageTitle}">
 				<content>
-					<Panel headerText="{i18n>homePanelText}">
+					<Panel 
+						headerText="{i18n>homePanelText}"
+						class="sapUiResponsiveMargin"
+						width="auto"
+						>
 						<content>
-							<Text text="Hello XMLView"></Text>
-							<Text text="Second Text"></Text>
-							<Button text="{i18n>showHelloButtonText}" press="onShowHello"></Button>
+							<Text 
+								text="Hello XMLView"
+								class="sapUiSmallMargin myCustomText"
+								></Text>
+							<Text 
+								text="Second Text"
+								class="sapUiSmallMargin sapThemeHighlight-asColor"
+								/>
+							<Button 
+								text="{i18n>showHelloButtonText}" 
+								press="onShowHello"
+								class="myCustomButton"
+								></Button>
 							<Input
 								value="{/recipient/name}"
 								description="Hello {/recipient/name}"
