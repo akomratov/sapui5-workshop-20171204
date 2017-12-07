@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+		<meta charset="utf-8">
+		<title>Walkthrough</title>
+		<script
+			id="sap-ui-bootstrap"
+			src="http://localhost:8098/sapui5/1.48.11/sap-ui-core.js"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-libs="sap.m"
+            data-sap-ui-compatVersion="edge"
+			data-sap-ui-preload="async"
+			data-sap-ui-resourceroots='{"workshop.wt": "./"}'
+		></script>
+		
+		<script>
+			var bRunWithMock = false;
+			var sRunWithMock = jQuery.sap.getUriParameters().get('responderOn');
+			if(sRunWithMock === 'true') {
+				bRunWithMock = true;
+			}
+			
+			if(true || bRunWithMock) {
+				jQuery.sap.require('sap.ui.core.util.MockServer');
+				var uri = '/NWD/V2/Northwind/Northwind.svc/';
+				var oMock = new sap.ui.core.util.MockServer({rootUri: uri});
+				var _sAppModulePath = 'workshop.wt/';
+				var sMetadataPath = 'localService/metadata.xml';
+				var sMetadataUrl = jQuery.sap.getModulePath(_sAppModulePath + sMetadataPath.replace(".xml",""), ".xml");
+				
+				// var sPath = jQuery.sap.getModulePath("workshop.wt.localService");
+				// oMock.simulate(sPath + '/metadata.xml', sPath + '/mockdata');
+				oMock.simulate('localService/metadata.xml', {
+				//oMock.simulate(sMetadataUrl, {
+					sMockdataBaseUrl: 'localService/mockdata',
+					bGenerateMissingMockData: true
+				});
+				oMock.start();
+			}
+		</script>
+		
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				
+				var oContainer = new sap.ui.core.ComponentContainer({
+					name: "workshop.wt"
+				});
+				
+				var oShell = new sap.m.Shell({
+					app: oContainer
+				});
+				
+				oShell.placeAt("content");
+				// oContainer.placeAt("content");
+				
+				// Now Component was placed into Shell 				
+				// new sap.ui.core.ComponentContainer({
+				// 	name: "workshop.wt"
+				// }).placeAt("content");
+				
+				// Step 06 - XMLView instantiated in Component.js
+				// sap.ui.xmlview({
+				// 	viewName: "workshop.wt.view.App"
+				// }).placeAt("content");
+
+                // Step 02 - simple Text				
+				// new sap.m.Text({
+				// 	text: "Hello SAPUI5"
+				// }).placeAt("content");
+			});
+		</script>
+	</head>
+	<body class="sapUiBody" id="content">
+	</body>
+</html>

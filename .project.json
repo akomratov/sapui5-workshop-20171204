@@ -14,7 +14,7 @@
   "mockpreview": {
     "mockUri": "/NWD/V2/Northwind/Northwind.svc",
     "metadataFilePath": "",
-    "loadJSONFiles": false,
+    "loadJSONFiles": true,
     "loadCustomRequests": false,
     "mockRequestsFilePath": ""
   }
