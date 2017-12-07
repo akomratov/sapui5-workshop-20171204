@@ -1,6 +1,10 @@
 <mvc:View
-	controllerName="workshop.wt.controller.InvoiceList"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Text text="dummy"/>
+	<List 
+		headerText="{i18n>invoiceListTitle}">
+		<items>
+			<ObjectListItem />
+		</items>
+	</List>
 </mvc:View>
