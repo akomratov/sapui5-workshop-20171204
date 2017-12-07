@@ -3,5 +3,19 @@
     "account": "i307744trial",
     "name": "workshop20171204",
     "lastVersionWeTriedToDeploy": "1"
+  },
+  "generation": [
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Thu, 07 Dec 2017 06:47:16 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/NWD/V2/Northwind/Northwind.svc",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
   }
 }
