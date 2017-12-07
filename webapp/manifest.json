@@ -52,6 +52,9 @@
 				"settings": {
 					"bundleName": "workshop.wt.i18n.i18n"
 				}
+			},
+			"invoice": {
+				"dataSource" : "invoiceRemote"
 			}
 		},
 		"resources": {
