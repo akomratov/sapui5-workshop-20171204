@@ -41,11 +41,21 @@ sap.ui.define([
 					],
 					and: false
 				});
+
+				///// ALTERNATIVE SYNTAX for Filter				
+				// var oFilter = new Filter({
+				// 	filters: [
+				// 		new Filter('ProductName', FilterOperator.Contains, sQuery),
+				// 		new Filter('Salesperson', FilterOperator.Contains, sQuery)
+				// 	],
+				// 	and: false
+				// });
+				
 				aFilters.push(oFilter);
 				
 				///// OLD STYLE
-				//var filter = new Filter("ProductName", FilterOperator.Contains, sQuery);
-				//aFilters.push(filter);
+				//var oFilter = new Filter("ProductName", FilterOperator.Contains, sQuery);
+				//aFilters.push(oFilter);
 			}
 			// Filter binding to list
 			var oList = this.getView().byId("invoiceList");
