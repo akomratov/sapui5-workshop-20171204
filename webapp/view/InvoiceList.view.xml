@@ -20,7 +20,28 @@
 				}"
 				numberUnit="{view>/currency}"
 				numberState="{= ${invoice>ExtendedPrice} > 500 ? 'Error' : 'Success'}">
-				
+				<firstStatus>
+					<ObjectStatus
+						state="{
+							path: 'invoice>Discount',
+							formatter: '.formatter.discountStatus'
+						}"
+						text="{
+							path: 'invoice>Discount',
+							formatter: '.formatter.discountText'
+						}"/>
+				</firstStatus>
+				<secondStatus>
+					<ObjectStatus
+						text="{
+							parts: [
+								{path: 'invoice>Discount'},
+								{path: 'invoice>ExtendedPrice'}
+							],
+							formatter: '.formatter.priceWithDiscount'
+						}"
+					/>
+				</secondStatus>
 			</ObjectListItem>
 		</items>
 	</List>
