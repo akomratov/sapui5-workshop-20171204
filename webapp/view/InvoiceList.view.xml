@@ -2,9 +2,11 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<List 
-		headerText="{i18n>invoiceListTitle}">
+		headerText="{i18n>invoiceListTitle}"
+		items="{invoice>/Invoices}">
 		<items>
-			<ObjectListItem />
+			<ObjectListItem 				
+				title="{invoice>ProductName}" />
 		</items>
 	</List>
 </mvc:View>
