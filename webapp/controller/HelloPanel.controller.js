@@ -3,8 +3,9 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/m/Dialog",
 	"sap/m/FormattedText",
-	"sap/m/Button"
-	], function(Controller, MessageToast, Dialog, FormattedText, Button) {
+	"sap/m/Button",
+	"workshop/wt/controller/HelloDialog"
+	], function(Controller, MessageToast, Dialog, FormattedText, Button, HelloDialog) {
 		"use strict";
 		return Controller.extend("workshop.wt.controller.HelloPanel", {
 			
@@ -57,18 +58,23 @@ sap.ui.define([
 	
 				this.oDialog.open();
 			},
-			onOpenErolsDialog: function() {
-				var oView = this.getView();
-				var oDialog = oView.byId("erolsDialog");
-				if(!oDialog) {
-					console.warn("Erol's dialog wasn't found!!!");
-					oDialog = sap.ui.xmlfragment(oView.getId(), "workshop.wt.view.HelloDialog", this);
-					oView.addDependent(oDialog);
-				}
-				oDialog.open();
+			onOpenHelloDialog: function() {
+				
+				this.getOwnerComponent().openHelloDialog();
+				
+				/////////////////////////////////////////////////////////////////////
+				// BEFORE this code was moved to HelloDialog.js
+				// var oView = this.getView();
+				// var oDialog = oView.byId("helloDialog");
+				// if(!oDialog) {
+				// 	console.warn("Hello dialog wasn't found!!!");
+				// 	oDialog = sap.ui.xmlfragment(oView.getId(), "workshop.wt.view.HelloDialog", this);
+				// 	oView.addDependent(oDialog);
+				// }
+				// oDialog.open();
 			},
-			onCloseErolsDialog: function() {
-				this.getView().byId("erolsDialog").close();
+			onCloseHelloDialog: function() {
+				this.getView().byId("helloDialog").close();
 			}
 		});
 });

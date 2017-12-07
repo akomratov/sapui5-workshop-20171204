@@ -4,6 +4,10 @@ sap.ui.define([
 		"use strict";
 		return Controller.extend("workshop.wt.controller.App", {
 			onInit: function() {
+			},
+			onOpenHelloDialog: function() {
+				console.log("Pages button");
+				this.getOwnerComponent().openHelloDialog();
 			}
 		});
 });

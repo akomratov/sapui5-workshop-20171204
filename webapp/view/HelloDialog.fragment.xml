@@ -2,19 +2,19 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<Dialog
-		id="erolsDialog"
-		title="{i18n>erolsDialogTitle}"
+		id="helloDialog"
+		title="{i18n>helloDialogTitle}"
 	>
       <content>
          <core:Icon
             src="sap-icon://hello-world"
-            size="8rem"
+            size="4rem"
             class="sapUiMediumMargin"/>
       </content>
 		<beginButton>
 			<Button 
 				text="Begin button"
-				press="onCloseErolsDialog"/>
+				press="onCloseHelloDialog"/>
 			
 		</beginButton>
 	</Dialog>

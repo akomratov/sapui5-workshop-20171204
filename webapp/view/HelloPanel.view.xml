@@ -29,8 +29,8 @@
 				valueLiveUpdate="true"
 				width="40%"/>
 			<Button 
-				text="{i18n>erolsButton}" 
-				press="onOpenErolsDialog"
+				text="{i18n>helloButton}" 
+				press="onOpenHelloDialog"
 				class="myCustomButton"
 				icon="sap-icon://person-placeholder"/>
 		</content>
