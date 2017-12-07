@@ -33,6 +33,9 @@ sap.ui.define([
 				
 				this._helloDialog = new HelloDialog(this.getRootControl());
 				
+				// TURN OFF "batch" requests
+				this.getModel("invoice").setUseBatch(false);
+				
 				//////////////////////////////////////////////////////////
 				// Resource model now is instantiated in manifest.json
 				// // Resource Model
