@@ -8,7 +8,18 @@
 		growingThreshold="5"
 		growingScrollToLoad="false"
    	    headerTextCOMMENTED="{i18n>invoiceListTitle}"
-		items="{invoice>/Invoices}"
+		items="{
+			path : 'invoice>/Invoices',
+				sorter : [
+				{
+					path : 'CustomerName',
+					group: true
+				},
+				{ 
+					path : 'OrderID'
+				}
+				]
+				}"
 		width="auto"
 		class="sapUiResponsiveMargin">
 		<headerToolbar>
@@ -22,7 +33,7 @@
 		</headerToolbar>
 		<items>
 			<ObjectListItem
-				title="{invoice>Quantity} x {invoice>ProductName} ({invoice>Salesperson})"
+				title="{invoice>CustomerName} / {invoice>OrderID} - {invoice>Quantity} x {invoice>ProductName} ({invoice>Salesperson})"
 				number="{
 					parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
 					type: 'sap.ui.model.type.Currency',
