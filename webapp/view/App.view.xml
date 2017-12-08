@@ -3,6 +3,15 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true">
+	<App class="myAppDemoWT" id="app" />
+</mvc:View>
+
+<!-- BEFORE ROUTING (up to step_22)
+<mvc:View
+	controllerName="workshop.wt.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
 	<App class="myAppDemoWT">
 		<pages>
 			<Page title="{i18n>homePageTitle}">
@@ -20,6 +29,7 @@
 		</pages>
 	</App>
 </mvc:View>
+-->
 
 <!-- BEFORE HelloPanel.view.xml
 <mvc:View

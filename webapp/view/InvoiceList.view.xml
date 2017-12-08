@@ -33,6 +33,8 @@
 		</headerToolbar>
 		<items>
 			<ObjectListItem
+				type="Navigation"
+				press="onInvoicePress"
 				title="{invoice>CustomerName} / {invoice>OrderID} - {invoice>Quantity} x {invoice>ProductName} ({invoice>Salesperson})"
 				number="{
 					parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],

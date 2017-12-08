@@ -36,6 +36,9 @@ sap.ui.define([
 				// TURN OFF "batch" requests
 				this.getModel("invoice").setUseBatch(false);
 				
+				// ROUTING INITIALIZATION
+				this.getRouter().initialize();
+				
 				//////////////////////////////////////////////////////////
 				// Resource model now is instantiated in manifest.json
 				// // Resource Model
