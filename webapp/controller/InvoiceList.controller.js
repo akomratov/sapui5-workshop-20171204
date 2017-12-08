@@ -19,9 +19,15 @@ sap.ui.define([
 			this.getView().setModel(oViewModel, "view");
 		},
 		
-		onInvoicePress: function() {
+		onInvoicePress: function(oEvent) {
+			var oItem = oEvent.getSource();
+			var sInvoicePath = oItem.getBindingContext("invoice").getPath().substr(1);
+			
+			jQuery.sap.log.info("Item path" + sInvoicePath, "", "workshop.wt");
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("rDetail");
+			oRouter.navTo("rDetail", {
+				invoicePath: sInvoicePath
+			});
 		},
 		
 		onFilterInvoices: function(oEvent) {

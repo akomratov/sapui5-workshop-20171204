@@ -1,8 +1,22 @@
 <mvc:View
+	controllerName="workshop.wt.controller.Detail"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page
+		showNavButton="true"
+		navButtonPress="onPressBack"
 		title="Walkthrough Details">
-		<ObjectHeader title="Invoice"/>
+		<ObjectHeader title="{invoice>ProductName}"
+		intro="{invoice>ShipperName}">
+			<attributes>
+				<ObjectAttribute text="{invoice>CustomerName}"></ObjectAttribute>
+			</attributes>
+		</ObjectHeader>
+		<ObjectHeader id="OrderDetails" title="{invoice>ShipName}"
+		intro="{invoice>ShipCity}">
+			<attributes>
+				<ObjectAttribute text="{invoice>ShipCountry}"></ObjectAttribute>
+			</attributes>
+		</ObjectHeader>
 	</Page>
 </mvc:View>

@@ -39,6 +39,9 @@ sap.ui.define([
 				// ROUTING INITIALIZATION
 				this.getRouter().initialize();
 				
+				// TURN ON Logging via jQuery
+				jQuery.sap.log.setLevel(jQuery.sap.log.Level.INFO, "workshop.wt");
+				
 				//////////////////////////////////////////////////////////
 				// Resource model now is instantiated in manifest.json
 				// // Resource Model

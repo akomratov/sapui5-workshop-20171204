@@ -55,6 +55,9 @@
 			},
 			"invoice": {
 				"dataSource" : "invoiceRemote"
+			},
+			"order": {
+				"dataSource" : "invoiceRemote"
 			}
 		},
 		"routing": {
@@ -72,7 +75,7 @@
 					"target": "tOverview"
 				},
 				{
-					"pattern": "pDetail",
+					"pattern": "pDetail/{invoicePath}",
 					"name": "rDetail",
 					"target": "tDetail"
 				}
