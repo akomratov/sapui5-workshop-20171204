@@ -1,7 +1,8 @@
 <mvc:View
 	controllerName="workshop.wt.controller.Detail"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:wt="workshop.wt.control">
 	<Page
 		showNavButton="true"
 		navButtonPress="onPressBack"
@@ -18,5 +19,6 @@
 				<ObjectAttribute text="{invoice>ShipCountry}"></ObjectAttribute>
 			</attributes>
 		</ObjectHeader>
+		<wt:ProductRating change="onRatingChange"/>
 	</Page>
 </mvc:View>

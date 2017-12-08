@@ -10,7 +10,6 @@ sap.ui.define([
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.getRoute("rDetail").attachPatternMatched(this._onObjectMatched, this);
 			},
-			
 			_onObjectMatched: function(oEvent) {
 				var sInvoicePath = oEvent.getParameter("arguments").invoicePath;
 				this.getView().bindElement({
@@ -22,7 +21,6 @@ sap.ui.define([
 					model: "invoice" // there is no need in this line if it is a DEFAULT model
 				});
 			},
-			
 			onPressBack: function() {
 				var oHistory = History.getInstance();
 				var sPreviousHash = oHistory.getPreviousHash();
@@ -33,6 +31,9 @@ sap.ui.define([
 					var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 					oRouter.navTo("rOverview", {}, true);
 				}
+			},
+			onRatingChange: function(oEvent) {
+				jQuery.sap.log.info("onRatingChange()", "", "workshop.wt");
 			}
 		});
 });
